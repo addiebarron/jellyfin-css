@@ -1,0 +1,135 @@
+/**
+  Theme tweaks to be used on top of ScyFin 
+  (https://github.com/loof2736/scyfin).
+*/
+    
+
+/* Theming */
+:root {
+  /* Overrides */
+  --rounded-cards: 5px !important;
+  /* Custom */
+  --primary-accent-color-text: #34ccff;
+  --backdrop-gradient: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.5) 100%);
+  --watched-item-color: #0c9100;
+}
+
+/* Library names */
+.cardText a[data-type="CollectionFolder"] {
+  display: none !important;
+}
+
+/* Backdrop */
+.backdropContainer {
+  max-height: 50vh;
+}
+.backgroundContainer.withBackdrop {
+  background: var(--backdrop-gradient) !important;
+}
+
+/* Item name */
+h1.itemName {
+  font-size: 40px !important;
+  line-height: 40px !important;
+}
+.layout-desktop .detailSectionContent {
+  margin-top: 55px !important;
+}
+
+/* Indicators */
+.indicator.countIndicator {
+  font-weight: bolder !important;
+  background-color: var(--primary-background-color) !important;
+  border: solid 2px var(--primary-accent-color) !important;
+}
+.indicator.playedIndicator {
+  background-color: var(--primary-background-color) !important;
+  border: solid 2px var(--watched-item-color) !important;
+}
+
+/* Watched button */
+.playstatebutton-icon-played {
+  color: inherit !important;
+}
+.playstatebutton-icon-played:before {
+  content: "\e86c" !important;
+}
+.playstatebutton-icon-played:hover:before {
+  transition: color 0.2s ease !important;
+  color: var(--primary-accent-color) !important;
+}
+
+/* Nav menu */
+.navMenuOption-selected {
+  color: var(--primary-accent-color-text) !important;
+}
+
+/* Play button */
+.paper-icon-button-light[data-action="resume"] {
+  border: solid 2px rgba(255,255,255,0.3) !important;
+}
+.paper-icon-button-light[data-action="resume"]:hover {
+  background: rgba(0,0,0,0.6) !important;
+  border: solid 2px rgba(255,255,255,0.4) !important;
+  font-size: 1.1rem !important;
+}
+/* Play button - episode list */
+button.listItemImageButton.itemAction {
+  display: none !important;
+  font-size: 1.2em !important;
+}
+button.listItemImageButton.itemAction:hover {
+  font-size: 1.3em !important;
+}
+.listItem.listItem-largeImage:hover {
+  background: inherit !important;
+  cursor: initial !important;
+}
+.listItem.listItem-largeImage:hover button.listItemImageButton.itemAction {
+  display: initial !important;
+}
+
+/* Tags */
+.itemTags {
+  --tag-gap: 4px;
+  color: transparent !important;
+  line-height: calc(1.6rem + var(--tag-gap)) !important;
+  font-size: 0 !important;
+}
+.itemTags .button-link {
+  font-size: small !important;
+  font-weight: normal !important;
+  margin-right: var(--tag-gap) !important;
+  color: rgba(255,255,255,0.9) !important;
+  background-color: var(--secondary-accent-color) !important;
+  padding: 4px 10px !important;
+  border-radius: 2em !important;
+  white-space: nowrap !important;
+}
+.itemTags .button-link:hover {
+  text-decoration: none !important;
+  color: rgba(255,255,255,1) !important;
+  background-color: #1fc6fd49 !important;
+}
+
+/* Form controls */
+.selectContainer label,
+.checkboxContainer label,
+.inputContainer label {
+  margin-bottom: 0.7em !important;
+}
+.selectContainer .emby-select {
+  padding: 10px 15px !important;
+}
+.selectContainer .selectArrowContainer {
+  right: 1em !important;
+  top: .75em !important;
+}
+textarea {
+  padding: 8px !important;
+  font-family: monospace !important;
+  line-height: 1.4em !important;
+}
+input {
+  padding: 8px !important;
+}

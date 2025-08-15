@@ -27,6 +27,17 @@
   background: var(--backdrop-gradient) !important;
 }
 
+/* Library view controls */
+.pageTabContent.is-active>:first-child.focuscontainer-x {
+  background-color: var(--primary-background-transparent) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 50px !important;
+  margin: auto !important;
+  width: fit-content !important;
+  padding: 0 0.5em 0 1em !important;
+  margin-bottom: 20px !important;
+}
+
 /* Item name */
 h1.itemName {
   font-size: 40px !important;
